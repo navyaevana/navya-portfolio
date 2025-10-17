@@ -44,6 +44,18 @@
       border-radius: 5px;
     }
 
+    .print-btn {
+      position: absolute;
+      top: 20px;
+      right: 150px;
+      padding: 8px 12px;
+      background: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
     section {
       padding: 20px;
     }
@@ -73,10 +85,21 @@
         padding: 15px;
       }
     }
+
+    @media print {
+      .toggle-btn, .print-btn {
+        display: none;
+      }
+      body {
+        background-color: white !important;
+        color: black !important;
+      }
+    }
   </style>
 </head>
 <body>
   <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark Mode</button>
+  <button class="print-btn" onclick="printPage()">Print to PDF</button>
 
   <header>
     <h1>NAVYA's Portfolio</h1>
@@ -91,30 +114,29 @@
   <section>
     <h2>Skills</h2>
     <ul>
-      <li>Creative & ArtisticSkills</li>
+      <li>Creative & Artistic Skills</li>
       <li>Navya</li>
-      <li>Business & Market awarness</li>
-      <li>communication & collabration</li>
+      <li>Business & Market Awareness</li>
+      <li>Communication & Collaboration</li>
     </ul>
   </section>
 
   <section>
-  <h2>Projects</h2>
-  <div class="project">
-    <h3>Seasonal Couture Collection</h3>
-    <p>A curated line of garments inspired by nature’s transitions, blending sustainable fabrics with bold silhouettes for Spring/Summer 2025.</p>
-  </div>
-  <div class="project">
-    <h3>Virtual Fashion Showcase</h3>
-    <p>An immersive digital runway experience using 3D modeling and virtual avatars to present inclusive designs across diverse body types.</p>
-  </div>
-</section>
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Seasonal Couture Collection</h3>
+      <p>A curated line of garments inspired by nature’s transitions, blending sustainable fabrics with bold silhouettes for Spring/Summer 2025.</p>
+    </div>
+    <div class="project">
+      <h3>Virtual Fashion Showcase</h3>
+      <p>An immersive digital runway experience using 3D modeling and virtual avatars to present inclusive designs across diverse body types.</p>
+    </div>
+  </section>
+
   <section>
     <h2>Contact</h2>
     <p>Email: evananavya@gmail.com</p>
-   <p>Portfolio: <a href="https://navya-portfolio.com" target="_blank">navya-portfolio.com</a></p>
-</section>
-
+    <p>Portfolio: <a href="https://navya-portfolio.com" target="_blank">navya-portfolio.com</a></p>
   </section>
 
   <footer>
@@ -124,6 +146,10 @@
   <script>
     function toggleTheme() {
       document.body.classList.toggle('dark');
+    }
+
+    function printPage() {
+      window.print();
     }
   </script>
 </body>
