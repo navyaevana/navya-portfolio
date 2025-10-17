@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAVYA's Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #61d5ef;
+      --text-color: #333;
+      --card-bg: white;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #f4f4f4;
+      --card-bg: #1e1e1e;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 8px 12px;
+      background: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .project {
+      background-color: var(--card-bg);
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .project:hover {
+      transform: scale(1.02);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    @media (max-width: 600px) {
+      header, section, footer {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark Mode</button>
+
+  <header>
+    <h1>NAVYA's Portfolio</h1>
+    <p>FASHION DESIGNER | Quiz Lover | Visionary Learner</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I’m passionate about designing, especially on fashion. I thrive on interactive learning and love turning concepts into practical impact.</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>Creative & ArtisticSkills</li>
+      <li>Technical Profiency</li>
+      <li>Business & Market awarness</li>
+      <li>communication & collabration</li>
+    </ul>
+  </section>
+
+  <section>
+  <h2>Projects</h2>
+  <div class="project">
+    <h3>Seasonal Couture Collection</h3>
+    <p>A curated line of garments inspired by nature’s transitions, blending sustainable fabrics with bold silhouettes for Spring/Summer 2025.</p>
+  </div>
+  <div class="project">
+    <h3>Virtual Fashion Showcase</h3>
+    <p>An immersive digital runway experience using 3D modeling and virtual avatars to present inclusive designs across diverse body types.</p>
+  </div>
+</section>
+  <section>
+    <h2>Contact</h2>
+    <p>Email: evananavya@gmail.com</p>
+   <p>Portfolio: <a href="https://navya-portfolio.com" target="_blank">navya-portfolio.com</a></p>
+</section>
+
+  </section>
+
+  <footer>
+    <p>© 2025 NAVYA. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
